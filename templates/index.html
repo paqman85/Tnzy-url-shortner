@@ -1,0 +1,34 @@
+{% extends "base.html"%}
+{% block content %}
+    <div class="col s4 offset-s6 center">
+
+<div class="row">
+    <h3 class="flow-text">Shrink your Fatty URLs and make then tnzy!</h3>
+      <div class="col s4">
+        <!-- Promo Content 1 goes here -->
+      </div>
+      <div class="col s4">
+
+        <form action="/" method="POST" >
+            {{ form.csrf_token }}
+            {{form.longurl.label}}
+            {{form.longurl}}
+            <input type="submit" value="Shrink!">
+
+
+        </form>
+      </div>
+      <div class="col s4">
+        <!-- Promo Content 3 goes here -->
+      </div>
+
+
+    </div>
+    {% endblock %}
+
+    {% block table %}
+
+    {{ table }}
+    </div>
+
+{% endblock %}
