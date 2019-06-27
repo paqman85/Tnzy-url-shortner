@@ -6,11 +6,15 @@ from wtforms import StringField
 from wtforms.validators import DataRequired
 from flask_table import Table, Col
 from flask import Markup
+from flask_heroku import Heroku
+
 
 
 app = Flask(__name__)
-app.config["SECRET_KEY"] = "goblicon"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Daylight99!@localhost/teensypy'
+# app.config["SECRET_KEY"] = "goblicon"
+app.config.['SSQLALCHEMY_TRACK_MODIFICATIONS'] = False
+# app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Daylight99!@localhost/teensypy'
+heroku = Heroku(app)
 db = SQLAlchemy(app)
 
 # TODO: User system to save shorten urls
