@@ -7,28 +7,16 @@ from wtforms.validators import DataRequired
 from flask_table import Table, Col
 from flask import Markup
 from flask_heroku import Heroku
+import sys
 
 
 
 app = Flask(__name__)
-# app.config["SECRET_KEY"] = "goblicon"
+app.config["SECRET_KEY"] = "goblicon"
 app.config['SSQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Daylight99!@localhost/teensypy'
 heroku = Heroku(app)
 db = SQLAlchemy(app)
-
-# TODO: User system to save shorten urls
-# class User(db.Model):
-#     id = db.Column(db.Integer, primary_key=True)
-#     username = db.Column(db.String(80), unique=True)
-#     email = db.Column(db.String(120), unique=True)
-#
-#     def __init__(self,username,email):
-#             self.username=username
-#             self.email=email
-#
-#     def __repr__(self):
-#         return "<User %r>" % self.username
 
 # Model for DB
 class Url(db.Model):
