@@ -12,7 +12,7 @@ from flask_heroku import Heroku
 
 app = Flask(__name__)
 # app.config["SECRET_KEY"] = "goblicon"
-app.config.['SSQLALCHEMY_TRACK_MODIFICATIONS'] = False
+app.config['SSQLALCHEMY_TRACK_MODIFICATIONS'] = False
 # app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:Daylight99!@localhost/teensypy'
 heroku = Heroku(app)
 db = SQLAlchemy(app)
