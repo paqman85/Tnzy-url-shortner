@@ -4,4 +4,4 @@
 
 It shortens, displays and tracks visits for any url submitted.</p>
 
-Demo at https://tnsy.io
+Demo at https://tnzy.io
